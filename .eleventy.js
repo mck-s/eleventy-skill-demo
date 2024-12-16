@@ -11,5 +11,5 @@ module.exports = function(eleventyConfig) {
         output: "public" // Output folder where Eleventy generates the site
       }
     };
-  };
+  }; 
   
