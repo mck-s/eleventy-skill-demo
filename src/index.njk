@@ -63,7 +63,8 @@
 						<!-- Contact -->
 <article id="contact">
     <h2 class="major">お問い合わせ</h2>
-    <form method="post" action="/" name="contact" data-netlify="true">
+    <form method="post" action="/" name="contact" data-netlify="true"
+ onsubmit="handleSuccess(event)">
         <div class="fields">
             <div class="field half">
                 <label for="name">Name</label>
@@ -82,7 +83,22 @@
             <li><input type="submit" value="Send Message" class="primary" /></li>
             <li><input type="reset" value="Reset" /></li>
         </ul>
+<button type="submit">Submit</button>
     </form>
+<script>
+  function handleSuccess(event) {
+    // Prevent the form from redirecting immediately
+    event.preventDefault();
+
+    // Here, you can do something like display a success message or show a modal
+    alert('Form submitted successfully! Redirecting to homepage.');
+
+    // After a short delay, redirect to the homepage
+    setTimeout(function() {
+      window.location.href = '/'; // Redirect to the homepage
+    }, 2000); // Delay of 2 seconds before redirect
+  }
+</script>
     <ul class="icons">
         <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
         <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
