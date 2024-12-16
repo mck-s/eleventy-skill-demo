@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
     return {
       dir: {
         input: "src",    // Source folder for Eleventy templates
+        data: "_data",
         output: "public" // Output folder where Eleventy generates the site
       }
     };
