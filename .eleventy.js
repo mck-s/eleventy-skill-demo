@@ -3,6 +3,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/css/main.css');
     eleventyConfig.addPassthroughCopy('src/images');
     eleventyConfig.addPassthroughCopy('src/js');
+    eleventyConfig.addPassthroughCopy('src/admin');
+
   
     // Return configuration for Eleventy
     return {
