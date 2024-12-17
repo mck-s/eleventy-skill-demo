@@ -1,16 +1,17 @@
 backend:
-name: git-gateway
-branch: main
+  name: git-gateway
+  branch: main
 media_folder: "/images"
 public_folder: "/images"
 
 collections:
-  - name: "intro"  # This corresponds to the content section you want to edit.
+  - name: "intro"
     label: "Intro Section"
-    folder: "_data/intro"  # This is where the editable content will be stored.
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Image", name: "image", widget: "image" }
+    files:
+      - label: "Intro Content"
+        name: "intro"
+        file: "src/_data/intro.json" # Points directly to the file
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+

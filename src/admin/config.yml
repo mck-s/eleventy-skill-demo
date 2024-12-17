@@ -10,7 +10,7 @@ collections:
     files:
       - label: "Intro Content"
         name: "intro"
-        file: "_data/intro.json" # Points directly to the file
+        file: "src/_data/intro.json" # Points directly to the file
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }

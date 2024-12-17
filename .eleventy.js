@@ -4,16 +4,15 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/images');
     eleventyConfig.addPassthroughCopy('src/js');
     eleventyConfig.addPassthroughCopy('src/admin');
-    eleventyConfig.addPassthroughCopy('_data');
+    eleventyConfig.addPassthroughCopy('src/_data');
 
   
     // Return configuration for Eleventy
     return {
       dir: {
         input: "src",    // Source folder for Eleventy templates
-        data: "_data",
-        output: "public" // Output folder where Eleventy generates the site
-      }
+        output: "public", // Output folder where Eleventy generates the site
+      },
     };
   }; 
   
